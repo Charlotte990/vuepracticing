@@ -5,13 +5,29 @@ Vue.component('results-area', {
                 is-one-quarter
             </div>
             <div class="column is-one-half">
-                is-one-half
+                <results v-for="result in results">
+                    <p>{{result.name + ': ' + result.id}}</p>
+                </results>
             </div>
             <div class="column is-one-quarter">
                 is-one-quarter
             </div>
         </div> 
-    `
+    `,
+
+    data() {
+        return {
+            results: [
+                {name: 'ADSERVER 1', id: 123},
+                {name: 'ADSERVER 2', id: 456},
+                {name: 'ADSERVER 3', id: 789}
+            ]
+        };
+    }
+})
+
+Vue.component('result', {
+    template: '<li><slot></slot></li>'
 })
 
 Vue.component('main-image-hero', {
