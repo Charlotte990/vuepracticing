@@ -1,0 +1,57 @@
+html {
+    background-color: #fbfffe;
+}
+body {
+    padding-top: 40px;
+    color: #67717D;
+}
+.button.is-primary {
+    background-color: #e699ff;
+    color: #67717D;
+}
+.button.is-primary:hover {
+    background-color: #9100c0;
+}
+.button.is-primary:active {
+    background-color: black;
+}
+.button.is-link {
+    background-color: #99e5ff;
+    color: #67717D;
+}
+.button.is-link:hover {
+    background-color: #008fc0;
+}
+.button.is-primary:active {
+    background-color: black;
+}
+.button.is-success {
+    background-color: #99ffe6;
+    color: #67717D;
+}
+.button.is-success:hover {
+    background-color: #00c091;
+}
+.button.is-primary:active {
+    background-color: black;
+}
+.button.is-warning {
+    background-color: #ffe699;
+    color: #67717D;
+}
+.button.is-warning:hover {
+    background-color: #c09100;
+}
+.button.is-primary:active {
+    background-color: black;
+}
+.button.is-danger {
+    background-color: #ff99b2;
+    color: #67717D;
+}
+.button.is-danger:hover {
+    background-color: #c0002f;
+}
+.button.is-primary:active {
+    background-color: black;
+}
