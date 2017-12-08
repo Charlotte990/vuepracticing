@@ -16,3 +16,10 @@ html {
     margin-top: -315px;
     margin-left: -200px
 }
+.navbar-item {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.navbar-item img {
+    max-height: 2.75rem;
+}

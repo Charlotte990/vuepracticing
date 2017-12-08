@@ -1,49 +1,49 @@
 Vue.component('results-area', {
     template: `
-        <div class="columns is-gapless is-multiline is-mobile">
-            <div class="column is-one-quarter">
-                is-one-quarter
-            </div>
-            <div class="column is-one-half">
-                <results v-for="result in results">
-                    <p>{{result.name + ': ' + result.id}}</p>
-                </results>
-            </div>
-            <div class="column is-one-quarter">
-                is-one-quarter
-            </div>
-        </div> 
+        <div>    
+            <section class="hero is-large">
+                <div class="hero-body">
+                    <div class="container">
+                        <div class="centreMe">
+                            <a href="#" @click="isActive = true">
+                                <img src="money.gif">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>    
+            <div class="columns is-gapless is-multiline is-mobile">
+                <div class="column is-one-quarter">
+                    -
+                </div>
+                <div class="column is-one-half">    
+                    <div>
+                        <result v-if="isActive" v-for="result in results">
+                            {{result.name + ': ' + result.id}}
+                        </result>
+                    </div>
+                </div>
+                <div class="column is-one-quarter">
+                    -
+                </div>
+            </div> 
+        </div>
     `,
 
     data() {
         return {
             results: [
-                {name: 'ADSERVER 1', id: 123},
-                {name: 'ADSERVER 2', id: 456},
-                {name: 'ADSERVER 3', id: 789}
-            ]
+                {name: 'Name 1', id: 123},
+                {name: 'Name 2', id: 456},
+                {name: 'Name 3', id: 789}
+            ],
+            isActive: false
         };
     }
 })
 
 Vue.component('result', {
-    template: '<li><slot></slot></li>'
-})
-
-Vue.component('main-image-hero', {
-    template: `
-        <section class="hero is-large">
-        <div class="hero-body">
-            <div class="container">
-                <div class="centreMe">
-                    <a href="#">
-                        <img src="money.gif">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    `
+    template: '<p><slot></slot></p>'
 })
 
 Vue.component('navigation-area', {
@@ -51,7 +51,7 @@ Vue.component('navigation-area', {
         <nav class="navbar is-transparent">
             <div class="navbar-brand">
                 <a class="navbar-item" href="https://bulma.io">
-                    <img src="https://technation.techcityuk.com/wp-content/uploads/2017/02/Switch-logo.png" alt="Switch: Mock UI." width="112" height="28">
+                    <img src="logominiformockui.jpg" alt="Mock UI." width="60" height="40">
                 </a>
                 <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
                     <span></span>
@@ -59,7 +59,6 @@ Vue.component('navigation-area', {
                     <span></span>
                 </div>
             </div>
-
             <div id="navbarExampleTransparentExample" class="navbar-menu">
                 <div class="navbar-start">
                     <a class="navbar-item" href="file:///Users/charlottejewer/Projects/vue2/8-Build_generic_interface/index.html">
@@ -112,5 +111,5 @@ Vue.component('navigation-area', {
 });
 
 new Vue({
-    el: '#root'
+    el: '#root',
 });
