@@ -1,32 +1,29 @@
 Vue.component('results-area', {
     template: `
         <div>    
-            <section class="hero is-large">
-                <div class="hero-body">
-                    <div class="container">
-                        <div class="centreMe">
-                            <a href="#" @click="isActive = true">
-                                <img src="money.gif">
-                            </a>
+            <div class="container">
+                <div class="centreMe">
+                    <a href="#" @click="isActive = !isActive">
+                        <img src="money.gif">
+                    </a>
+                </div>
+                
+                <div id="output-area" class="columns is-gapless is-multiline is-mobile">
+                    <div class="column is-one-quarter">
+                        -
+                    </div>
+                    <div class="column is-one-half">    
+                        <div>
+                            <result v-if="isActive" v-for="result in results">
+                                {{result.name + ': ' + result.id}}
+                            </result>
                         </div>
                     </div>
-                </div>
-            </section>    
-            <div class="columns is-gapless is-multiline is-mobile">
-                <div class="column is-one-quarter">
-                    -
-                </div>
-                <div class="column is-one-half">    
-                    <div>
-                        <result v-if="isActive" v-for="result in results">
-                            {{result.name + ': ' + result.id}}
-                        </result>
+                    <div class="column is-one-quarter">
+                        -
                     </div>
-                </div>
-                <div class="column is-one-quarter">
-                    -
-                </div>
-            </div> 
+                </div> 
+            </div>
         </div>
     `,
 
@@ -48,7 +45,7 @@ Vue.component('result', {
 
 Vue.component('navigation-area', {
     template: `
-        <nav class="navbar is-transparent">
+        <nav class="navbar is-danger">
             <div class="navbar-brand">
                 <a class="navbar-item" href="https://bulma.io">
                     <img src="logominiformockui.jpg" alt="Mock UI." width="60" height="40">

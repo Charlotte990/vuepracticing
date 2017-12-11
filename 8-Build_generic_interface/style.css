@@ -6,15 +6,15 @@ html {
     text-align: center;
 }
 .centreMe {
-    height: 200px;
     width: 400px;
     background: white;
 
-    position: fixed;
+    /*position: fixed;
     top: 50%;
-    left: 50%;
-    margin-top: -315px;
-    margin-left: -200px
+    left: 50%;*/
+    margin-top: 105px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .navbar-item {
     padding-top: 0px;
@@ -22,4 +22,11 @@ html {
 }
 .navbar-item img {
     max-height: 2.75rem;
+}
+.navbar.is-danger {
+    background-color: purple;
+}
+
+#output-area {
+    margin-top: 85px;
 }
